@@ -24,7 +24,8 @@ CREATE OR REPLACE STORAGE INTEGRATION gcp_main_integration
   TYPE = EXTERNAL_STAGE
   STORAGE_PROVIDER = GCS
   ENABLED = TRUE
-  STORAGE_ALLOWED_LOCATIONS = ('gcs://my-data-bucket-a/', 'gcs://my-data-bucket-b/');```
+  STORAGE_ALLOWED_LOCATIONS = ('gcs://my-data-bucket-a/', 'gcs://my-data-bucket-b/');
+```
 
 ---
 
@@ -35,13 +36,14 @@ CREATE OR REPLACE STORAGE INTEGRATION gcp_main_integration
 CREATE OR REPLACE STAGE gcp_raw_stage
   URL = 'gcs://my-data-bucket/'
   STORAGE_INTEGRATION = gcp_analytics_integration
-  FILE_FORMAT = my_csv_format;```
+  FILE_FORMAT = my_csv_format;
+```
 
 ---
 
 ## 4. Execute Data Loading
 
-> Load data from the Stage into the targeted table using the COPY INTO command.
+> Load data from the Stage into the targeted table using the `COPY INTO` command.
 > **OPTIONS**:
   > PATTERN: Filters files using Regular Expressions.
   > FILES: Loads specific files by exact name (alternative to Pattern).
@@ -53,4 +55,5 @@ CREATE OR REPLACE STAGE gcp_raw_stage
 COPY INTO raw_sales_table
 FROM @gcp_raw_stage/sales/2026/
 -- FILE_FORMAT = (SKIP_HEADER = 1)
--- PATTERN = '.*.csv';```
+-- PATTERN = '.*.csv';
+```
