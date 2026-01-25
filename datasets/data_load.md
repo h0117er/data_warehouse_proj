@@ -10,7 +10,6 @@ We follow the **ELT (Extract, Load, Transform)** pattern:
 1.  **Extract & Load:** Raw data (CSV, JSON) is loaded from GCS into Snowflake `RAW` tables.
 2.  **Transform:** dbt (Data Build Tool) transforms the raw data into analytics-ready models.
 
----
 
 ## 2. Storage Integration (Authentication)
 **Concept:** A Storage Integration is a Snowflake object that stores the generated IAM user for your external cloud storage.
@@ -28,7 +27,6 @@ CREATE OR REPLACE STORAGE INTEGRATION gcp_main_integration
   STORAGE_ALLOWED_LOCATIONS = ('gcs://my-data-bucket-a/', 'gcs://my-data-bucket-b/');
 ```
 
----
 
 ## 3. Stage
 **Concept: Instead of accessing the raw bucket URL directly, we use a Stage as a secure abstraction layer.**
@@ -40,7 +38,6 @@ CREATE OR REPLACE STAGE gcp_raw_stage
   FILE_FORMAT = my_csv_format;
 ```
 
----
 
 ## 4. Execute Data Loading
 
