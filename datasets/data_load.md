@@ -2,6 +2,7 @@
    
 This document outlines the step-by-step process of establishing a data ingestion pipeline from Google Cloud Storage to Snowflake.
 Assumes that the schema and tables have already been created and the authorisation in Google Cloud Storage is set as a Storage Object Viewer. 
+
 **Helpful Snowflake Documentation: https://docs.snowflake.com/en/user-guide/data-load-gcs**
 
 ## 1. Architecture Overview
