@@ -18,6 +18,9 @@ Develop a modern data warehouse using Snowflake and DBT to consolidate sales dat
 - **Scope**: Focus on the latest dataset only; historisation of data is not required.
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
+<p>
+  <img width=90% alt="Image" src="https://github.com/user-attachments/assets/caa0d3f2-c9c4-461e-9db1-9cec7bbd2fba" />
+</p>
 ---
 
 ### BI: Analytics & Reporting (Data Analytics)
