@@ -1,0 +1,42 @@
+models:
+  - name: dim_customers
+
+    columns:
+      - name: customer_key 
+        description: The surrogated customer key. 
+        tests:
+          - not_null
+          - relationships: 
+              arguments:
+                to: ref('dim_customers')
+                field: customer_key              
+
+      - name: customer_number 
+        tests:
+          - not_null
+
+      - name: marital_status 
+        description: Status of marriage.  
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Single','Married','N/A']
+
+      - name: gender  
+        description: Gender of customers.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Male','Female','N/A']
+
+  - name: dim_products 
+
+    columns:
+      - name: product_key 
+        description: The surrogated product key. 
+        tests:
+          - not_null
+          - relationships: 
+              arguments:
+                to: ref('dim_products')
+                field: product_key 
