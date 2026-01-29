@@ -1,0 +1,19 @@
+version: 1
+
+sources:
+  - name: portfolio
+    schema: bronze
+    tables:
+
+      - name: crm_cust_info
+        identifier: crm_cust_info
+      - name: crm_prd_info   
+        identifier: crm_prd_info
+      - name: crm_sales_details
+        identifier: crm_sales_details
+      - name: erp_cust_info
+        identifier: erp_cust_info
+      - name: erp_loc
+        identifier: erp_loc
+      - name: erp_category
+        identifier: erp_category
