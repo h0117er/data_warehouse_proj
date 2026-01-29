@@ -1,0 +1,145 @@
+
+models:
+  - name: crm_cust_info
+    description: Cleansed customer data.
+
+    columns:
+      - name: cst_key
+        description: The customer key. References the crm_sales_details table. 
+        tests:
+          - not_null
+
+      - name: cst_marital_status 
+        description: Status of marriage.  
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Single','Married','N/A']
+
+      - name: cst_gndr 
+        description: Gender of customers.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Male',
+                        'Female',
+                        'N/A']
+
+  - name: crm_prd_info 
+    description: Cleansed table for the products.
+    columns:
+      - name: sls_prd_key
+        description: The key of the product. This column reference the crm_sales_details table. 
+        tests:
+          - not_null
+      
+      - name: prd_cost
+        tests:
+          - positive_values
+
+      - name: prd_line
+        description: Describe the product lines. 
+        data_type: string
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Mountain', 'Road','Other Sales','Touring','N/A']
+
+
+  - name: crm_sales_details
+    description: Cleansed customer's sales details. 
+
+    columns:
+      - name: sls_ord_num
+        tests:
+          - not_null
+
+      - name: sls_prd_key 
+        tests: 
+          - relationships: 
+              arguments:
+                to: ref('crm_prd_info')
+                field: sls_prd_key       
+
+      - name: sls_cust_id      
+        tests: 
+          - relationships: 
+              arguments:
+                to: ref('crm_cust_info')
+                field: cst_id     
+
+      - name: sls_order_dt
+        data_type: date
+
+      - name: sls_ship_dt
+        data_type: date
+
+      - name: sls_due_dt
+        data_type: date
+
+      - name: sls_sales
+        tests:
+          - positive_values
+
+      - name: sls_quantity 
+        tests:
+          - positive_values
+
+      - name: sls_price
+        tests:
+          - positive_values
+
+  - name: erp_cust_info
+    description: Cleansed customers' customer key and birthday data in ERP system. 
+
+    columns:
+      - name: cid 
+        tests: 
+          - relationships: 
+              arguments:
+                to: ref('crm_cust_info')
+                field: cst_key      
+
+      - name: gen       
+        description: Gender of the customer. 
+        data_type: string
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Female', 'Male','N/A']
+
+  - name: erp_loc 
+    description: Cleansed customers' location data in ERP system. 
+
+    columns:
+      - name: cid 
+        tests: 
+          - relationships: 
+              arguments:
+                to: ref('erp_cust_info')
+                field: cid       
+
+      - name: cntry        
+        description: Country of the customer. 
+        data_type: string
+        tests:
+          - not_null 
+
+  - name: erp_category
+    description: Cleansed category of the product in ERP system. 
+
+    columns:
+      - name: cat          
+        data_type: string
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Clothing','Bikes','Components','Accessories']
+
+      - name: maintenance         
+        data_type: string
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Yes', 'No']
+
