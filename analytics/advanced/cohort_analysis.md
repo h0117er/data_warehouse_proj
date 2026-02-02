@@ -1,6 +1,6 @@
 # Cohort analysis and Retention
 
-<img src = 'docs/cohort_analysis.png' >
+<img src = '../../docs/cohort_analysis.png' >
 
 ```sql
 WITH first_purchase AS (
