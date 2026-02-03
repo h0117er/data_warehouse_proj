@@ -21,6 +21,8 @@ Develop a modern data warehouse using Snowflake and DBT to consolidate sales dat
 <p>
   <img width=90% alt="Image" src="./docs/data_architecture.png" />
 </p>
+
+
 ---
 
 ### BI: Analytics & Reporting (Data Analytics)
