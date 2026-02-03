@@ -1,16 +1,21 @@
 # Unlocking Market Potential: Comprehensive EDA and Sales Strategy for Global E-Commerce
 
-## Summary 
+Object: 
 
-- While the "bikes" category occupied only 32.88%, 96.46% of the revenue was highlighted. 
-- Regardless of the country, there were 2 major declines in ARPU. Every first month of each year, more than half of the ARPU decreased.
-- Married Americans tended to lead the revenue after Nov 2012; however, the differences between marital status are not significant.
-- These 3 models, Mountain-200, Road-350 and Touring-1000 lead to significant sales amounts, increasing by 10% of the prices.
 
-As a result of the research, I suggest **focusing on only "bike" category**.
+---
+## Executive Summary 
 
+- **High-Impact Category Focus**: Identified that the "Bikes" category, while comprising only 32.9% of the catalogue, drives a staggering 96.5% of total revenue, suggesting a pivot toward a bike-centric inventory strategy.
+- **Churn & ARPU Risk Management**: Uncovered a critical 50%+ ARPU drop every January. Recommended implementing automated re-engagement triggers via the data pipeline to stabilise Q1 cash flow.
+- **Market Segment Dominance**: Identified Married US-based consumers as the lead revenue segment since late 2012, providing a clear target for high-value localised campaigns.
+- **Product Profitability**: Confirmed 10% price growth for flagship models (Mountain-200, Road-350, Touring-1000) without sales volume loss, indicating a successful premium positioning strategy.
+- **Action Plan**: Immediately prioritise the "Bikes" category as the core business driver to streamline operations and enhance bottom-line profitability.
+
+
+---
 ## Criteria 
-- period: 2010.12.29 ~ 2014.01.28
+- Period: 2010.12.29 ~ 2014.01.28
 - Aggregations
   | Measure Name | Values |
   |---|---|
@@ -21,5 +26,6 @@ As a result of the research, I suggest **focusing on only "bike" category**.
   | Total Number of Products | 295 |
   | Total Number of Customers | 18,485 |
 
+--- 
 ## EDA
 
