@@ -1,5 +1,7 @@
 # Cohort analysis and Retention
 
+Retention is the ultimate measure of product value. By employing Monthly and Daily Cohort Analysis, I provide the business with a granular view of the customer lifecycle. This approach transforms raw data into actionable intelligence, allowing us to mitigate churn, refine our targeting, and ultimately drive compounded growth.
+
 
 ## 1. Monthly Cohort Analysis and Retention 
 
