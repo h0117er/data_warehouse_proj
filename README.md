@@ -19,7 +19,7 @@ Develop a modern data warehouse using Snowflake and DBT to consolidate sales dat
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
 <p>
-  <img width=90% alt="Image" src="./source/data_architecture.png" />
+  <img width=90% alt="Image" src="./docs/data_architecture.png" />
 </p>
 ---
 
