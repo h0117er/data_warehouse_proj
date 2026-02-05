@@ -29,9 +29,10 @@ Develop a modern data warehouse using Snowflake and DBT to consolidate sales dat
 
 #### Objective
 Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behaviour**
+- **Customer Demographics**
 - **Product Performance**
 - **Sales Trends**
+- **Cohort analysis and Retention**
 
 These insights empower stakeholders with key business metrics, enabling strategy decision-making.
 
@@ -39,4 +40,4 @@ These insights empower stakeholders with key business metrics, enabling strategy
 
 ## 🌟 About Me 🌟
 
-Hi, there! I'm **Erin Hwang**. I'm a data professional. 
+Hi, there! I'm **Erin Hwang**. I'm a data professional with 5 years of experience. 
