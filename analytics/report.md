@@ -20,12 +20,16 @@ Object:
   | Measure Name | Values |
   |---|---|
   | Total Sales | $29,356,250 |
-  | Total Quantity | 60,423 |
   | Average Price | $486.04 |
+  | Total Quantity | 60,423 |
   | Total Number of Orders | 27,659 |
   | Total Number of Products | 295 |
   | Total Number of Customers | 18,485 |
 
 --- 
 ## EDA
+
+Implemented these charts below on Tableau. 
+
+
 
